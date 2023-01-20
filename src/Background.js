@@ -1,16 +1,24 @@
 import React from 'react';
-import {View, ImageBackground} from 'react-native';
+import {View, StyleSheet, ImageBackground} from 'react-native';
+import {create} from 'react-test-renderer';
+const backgroundImage = require('./assets/leaves.jpg');
 
-const Background = ({cheldrin}) => {
+const Background = ({children}) => {
   return (
     <View>
-      <ImageBackground
-        source={require('./assets/leaves.jpg')}
-        style={{height: '100%'}}
-      />
-      <View style={{position: 'absolute'}}>{cheldrin}</View>
+      <ImageBackground source={backgroundImage} style={styles.image} />
+      <View style={styles.cheldrin}>{children}</View>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  image: {
+    height: '100%',
+  },
+  cheldrin: {
+    position: 'absolute',
+  },
+});
 
 export default Background;
