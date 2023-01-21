@@ -1,18 +1,17 @@
 import React from 'react';
-import { Text, StyleSheet, View, TouchableOpacity, Alert } from 'react-native';
+import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import Background from './Background';
 
 const Home = () => {
- 
   return (
     <Background>
       <View style={styles.container}>
         <Text style={styles.text}>Let's start</Text>
-        <Text style={styles.text}>Coding</Text>
-        <TouchableOpacity style={styles.Button_login} >
+        <Text style={styles.text_second}>Connecting</Text>
+        <TouchableOpacity style={styles.Button_login}>
           <Text style={styles.button_Text_login}>Log in</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Button_signup} >
+        <TouchableOpacity style={styles.Button_signup}>
           <Text style={styles.button_Text_signup}>Sign up</Text>
         </TouchableOpacity>
       </View>
@@ -24,39 +23,42 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: 35,
     marginVertical: 130,
-    marginBottom:300
   },
   text: {
     color: 'white',
-    fontSize: 60,
-    fontFamily:"Poppins"
+    fontSize: 59,
   },
-  Button_login:{
+  text_second: {
+    color: 'white',
+    fontSize: 59,
+    marginBottom: 100,
+  },
+  Button_login: {
     alignItems: 'center',
-    backgroundColor: "green",
+    backgroundColor: 'green',
     borderRadius: 100,
     width: 300,
     paddingVertical: 7,
-    marginVertical:10,
+    marginVertical: 10,
   },
-  Button_signup:{
+  Button_signup: {
     alignItems: 'center',
-    backgroundColor: "white",
+    backgroundColor: 'white',
     borderRadius: 100,
     width: 300,
     paddingVertical: 7,
-    marginVertical:10,
+    marginVertical: 10,
   },
-  button_Text_login:{
-    color: "white",
+  button_Text_login: {
+    color: 'white',
     fontSize: 25,
     fontWeight: 'bold',
   },
-  button_Text_signup:{
-    color: "green",
+  button_Text_signup: {
+    color: 'green',
     fontSize: 25,
     fontWeight: 'bold',
-  }
+  },
 });
 
 export default Home;
