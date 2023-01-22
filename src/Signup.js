@@ -1,11 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Background from './Background';
 
 const Signup = () => {
   return (
-    <View>
-      <Text>Signup</Text>
-    </View>
+    <Background>
+      <View>
+        <Text>Signup</Text>
+      </View>
+    </Background>
   );
 };
 
