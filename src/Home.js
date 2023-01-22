@@ -2,16 +2,20 @@ import React from 'react';
 import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import Background from './Background';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <Background>
       <View style={styles.container}>
         <Text style={styles.text}>Let's start</Text>
         <Text style={styles.text_second}>Connecting</Text>
-        <TouchableOpacity style={styles.Button_login}>
+        <TouchableOpacity
+          style={styles.Button_login}
+          onPress={() => navigation.navigate('Login')}>
           <Text style={styles.button_Text_login}>Log in</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.Button_signup}>
+        <TouchableOpacity
+          style={styles.Button_signup}
+          onPress={() => navigation.navigate('Signup')}>
           <Text style={styles.button_Text_signup}>Sign up</Text>
         </TouchableOpacity>
       </View>
